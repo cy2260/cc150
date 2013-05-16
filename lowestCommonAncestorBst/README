@@ -1,0 +1,3 @@
+Find the lowest commont ancestor of a BST
+
+first node that is larger than val1 and smaller than val2 is the node
