@@ -1,0 +1,4 @@
+Find the lowest commont ancestor of a binary tree
+
+buttom up to find the nodes of given values repectively
+find the ancestor when its left and right results are both not NULL
