@@ -29,13 +29,19 @@ Node* LRUCache::getResultFromDB( const string& query ) {
 }
 
 void LRUCache::insertResult( Node* node ) {
-    queryResultMap[node->query] = node;
-    insertNodeToFront( node );
-    ++size;
+    unordered_map<string, Node*>::iterator it = queryResultMap.find(query);
+    if( it != queryResult.end() ) {
+        moveNodeToFront( it->second);
+    }
+    else {
+        queryResultMap[node->query] = node;
+        insertNodeToFront( node );
+        ++size;
     
-    if( size > MAX_SIZE ) {
-        map.erase( tail->query );
-	removeNodeFromTail();
+        if( size > MAX_SIZE ) {
+            map.erase( tail->query );
+	    removeNodeFromTail();
+        }
     }
 }
 
