@@ -35,6 +35,11 @@ void merge( int* arr, int* tmpArr, int left, int mid, int right ) {
 	}
 	++tmpIdx;
     }
+
+    while( left <= right ) {
+        arr[left] = tmpArr[left];
+	++left;
+    }
 }
 
 void mergeSort( int* arr, int len ) {
