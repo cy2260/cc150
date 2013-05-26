@@ -1,0 +1,5 @@
+Inorder Successor in Binary Search Tree
+
+In Binary Search Tree, Inorder Successor of an input node can be defined as the node with the smallest key greater than the key of input node.
+
+what if node does not have parent pointer?
