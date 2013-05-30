@@ -23,4 +23,39 @@ Node* findInoderSuccessorInBST( Node* node ) {
     }
 
     return NULL;
+}
 
+
+Node* findInoderSuccessorInBST( Node* root, Node* node ) {
+    if( !root || !node ) return NULL;
+
+    if( node->right != NULL ) {
+        Node* temp = node->right;
+	while( temp->left != NULL ) {
+	    temp = temp->left;
+	}
+	return temp;
+    }
+        
+    Node* currNode  = root;
+    Node* successor = NULL;
+    while( currNode != NULL ) {
+        if( node->data > currNode->data ) {
+	    currNode = currNode->right;
+	}
+	else if( node->data < currNode->data ) {
+	    successor = currNode;
+	    currNode  = currNode->next;
+	}
+	else {
+	    break;
+	}
+    }
+
+    return successor;
+}
+
+
+
+
+}
