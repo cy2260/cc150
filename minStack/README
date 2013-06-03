@@ -1,0 +1,8 @@
+Design a stack which has a function min which returns the minimun element.
+push, pop, top, min should all operate in O(1) time;
+
+Besides the stack to store actual values, we need to have another stack to keep track of current mininum value.
+
+when calling push(val), comapre val with minStack.top(), if val is smaller, push val to minStack. Otherwise, do nothing.
+
+when calling pop(), comapre stack.top() with minStack.top(), if stack.top() is equal to minimun value, pop minimun value from minStack as well.
