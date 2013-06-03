@@ -1,0 +1,27 @@
+Longest Repeated Substring
+
+Given a string s, find the longest substring that appears more than once in s.
+
+s = "abcabcaacb", return "abc"
+s = "aababa", return "aba"
+s = "abcd", return ""
+
+solution 1, 
+given a string with len = n, 
+there are 2 substr with len = n-1, 3 substr with len = n-2, 
+          4 substr with len = n-3, 4 substr with len = n-3,
+	  ....
+	  n substr with len = 1
+we can check if there is a repeated substr with len=n-1, and then len=n-1 ... finally check each char
+
+solution 2,
+build a suffix array
+check adjacent substring to determine the longest one
+banana:
+a
+ana
+anana
+banana
+na
+nana
+
