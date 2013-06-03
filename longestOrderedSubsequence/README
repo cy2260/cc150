@@ -1,0 +1,9 @@
+Longest Ordered Subsequence
+{1, 7, 3, 5, 9, 4, 8}
+return 4
+1,3,5,9
+
+brute force, find all subsets, O(2^n)
+dp, O(n2), keep track of the current longest distance ending at idex i
+
+
