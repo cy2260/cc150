@@ -1,0 +1,3 @@
+http://www.sorting-algorithms.com/insertion-sort
+good for small data set
+good for mostly sorted data, best O(n)
