@@ -12,3 +12,18 @@ Node* lowestCommonAncestorBst( Node* root, int val1, int val2 ) {
 
     return NULL;
 }
+
+Node* lowestCommonAncestorBst( Node* root, int val1, int val2 ) {
+    if( !root ) return NULL;
+    
+    if( max(val1, val2) < root->data ) {
+        return lowestCommonAncestorBst( root->left, val1, val2 );
+    }
+    else if( min(val1, val2) > root->data ) {
+        return lowestCommonAncestorBst( root->right, val1, val2 );
+    }
+    else {
+        return root;
+    }
+}
+

@@ -1,3 +1,12 @@
 Find the lowest commont ancestor of a BST
 
-first node that is larger than val1 and smaller than val2 is the node
+first node that is larger than or equals to val1 and smaller or equals to than val2 is the node
+
+Both nodes are to the left of the tree.
+Both nodes are to the right of the tree.
+
+One node is on the left while the other is on the right.
+OR
+When the current node equals to either of the two nodes, this node must be the LCA too.
+
+
