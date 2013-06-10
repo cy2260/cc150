@@ -24,11 +24,13 @@ Foo::~Foo() {
     delete dataPtr;
 }
 
+//prevent from shallow copy
 Foo::Foo( const Foo& f ) {
     dataPtr = new int;
     *dataPtr = *(f.dataPtr);
 }
 
+//prevent from shallow copy
 Foo& Foo::operator=( const Foo& f ) {
     //self assignment, do nothing
     if( this == &f ) {
