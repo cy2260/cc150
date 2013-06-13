@@ -5,7 +5,7 @@ public:
     : name( n )
     , parent( p )
     {}
-    ~virtual Entry();
+    virtual ~Entry();
     
     string getFullPath() {
         return parent->getFullPath() + "/" + name;
