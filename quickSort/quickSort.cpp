@@ -13,7 +13,7 @@ int partition( int* arr, int low, int high ) {
 
 void quickSort( int* arr, int low, int high ) {
     if( low < high ) {
-        int pivodIdx = pivot( arr, low, high );
+        int pivodIdx = partition( arr, low, high );
 	quickSort( arr, low, pivotIdx-1 );
 	quickSort( arr, pivot+1, high );
     }
