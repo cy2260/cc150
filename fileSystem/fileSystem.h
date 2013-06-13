@@ -38,7 +38,7 @@ class File : public Entry
 public:
     File( const string& n, Directory* p, int sz )
     : Entry( n, p )
-    , size = sz
+    , size( sz )
     {}
     ~File();
 
