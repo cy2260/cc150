@@ -67,6 +67,7 @@ public:
 
     void listAll();
     void listEntry( const string& name );
+    bool deleteEntry( const string& name );
 
 protected:
     vector<Entry*> entries;
