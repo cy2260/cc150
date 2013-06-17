@@ -7,6 +7,7 @@ output {0, 0, 0, 1, 1, 2, 2, 2, 2, 2, 2, 2};
 
 2. three pointers ( inplace sort )
    low, idx, high
+   loop invariant:
    [0 ~ low-1]     zeros
    [low ~ idx-1]   ones
    [idx ~ high]    unknows
