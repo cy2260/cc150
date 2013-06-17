@@ -1,0 +1,13 @@
+Dutch national flag
+
+intput {0, 0, 1, 2, 2, 1, 2, 2, 2, 2, 2, 0};
+output {0, 0, 0, 1, 1, 2, 2, 2, 2, 2, 2, 2};
+
+1. counting sort
+
+2. three pointers ( inplace sort )
+   low, idx, high
+   [0 ~ low-1]     zeros
+   [low ~ idx-1]   ones
+   [idx ~ high]    unknows
+   [high+1 ~ len ] twos
