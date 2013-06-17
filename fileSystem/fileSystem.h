@@ -5,7 +5,7 @@ public:
     : name( n )
     , parent( p )
     {}
-    ~virtual Entry();
+    virtual ~Entry();
     
     string getFullPath() {
         return parent->getFullPath() + "/" + name;
@@ -38,7 +38,7 @@ class File : public Entry
 public:
     File( const string& n, Directory* p, int sz )
     : Entry( n, p )
-    , size = sz
+    , size( sz )
     {}
     ~File();
 
@@ -67,6 +67,7 @@ public:
 
     void listAll();
     void listEntry( const string& name );
+    bool deleteEntry( const string& name );
 
 protected:
     vector<Entry*> entries;
