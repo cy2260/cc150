@@ -45,4 +45,5 @@ void merge( int* arr, int* tmpArr, int left, int mid, int right ) {
 void mergeSort( int* arr, int len ) {
     int* tmpArr = new int[len];
     mergeSort( arr, tmpArr, 0, len-1 );
+    delete[] tmpArr;
 }
